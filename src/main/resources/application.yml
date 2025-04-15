@@ -1,9 +1,9 @@
 spring:
   application:
-    name: premierProjet
+    name: ludotheque
 #Connection to DB
   datasource:
-    url: jdbc:sqlserver://localhost;databasename=DEMO_ENI_BD;integratedSecurity=false;encrypt=false;trustServerCertificate=false
+    url: jdbc:sqlserver://localhost;databasename=LUDO_DB;integratedSecurity=false;encrypt=false;trustServerCertificate=false
     username: sa
     password: Pa$$w0rd
 
