@@ -25,7 +25,12 @@ public class Client {
     @Column(unique = true)
     private String email;
 
-    @Column(length = 10)
+    @Column(length = 15)
     private String no_telephone;
+
+
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "adress_id")
+    private Adress adress;
 
 }
