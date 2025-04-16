@@ -1,10 +1,10 @@
 package fr.eni.ludotheque.bo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -20,4 +20,7 @@ public class Kind {
 
     @NonNull
     private String libelle;
+
+    @ManyToMany(mappedBy = "kinds")
+    private Set<Game> games = new HashSet<>();
 }
