@@ -32,6 +32,9 @@ public class Game {
     @NonNull
     private Double dayPrice;
 
+    @OneToMany(mappedBy = "game", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Sample> sample;
+
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "GAME_KIND",
