@@ -16,6 +16,7 @@ public class Sample {
 
     @NonNull
     @Column(length = 12, unique = true, nullable = false)
+
     private String barcode;
 
     @NonNull
@@ -24,4 +25,5 @@ public class Sample {
     @ManyToOne
     @JoinColumn(name = "game_id") // clé étrangère vers Game.id
     private Game game;
+
 }
