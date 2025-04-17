@@ -15,9 +15,13 @@ public class Sample {
     private Long id;
 
     @NonNull
-    @Column(length = 12)
+    @Column(length = 12, unique = true, nullable = false)
     private String barcode;
 
     @NonNull
     private Boolean borrowable;
+
+    @ManyToOne
+    @JoinColumn(name = "game_id") // clé étrangère vers Game.id
+    private Game game;
 }
