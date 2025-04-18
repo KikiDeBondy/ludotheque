@@ -25,7 +25,8 @@ public class Adress {
     @NonNull
     private String city;
 
-    @OneToOne(mappedBy = "adress")
-    private Client client;
+    //PAS BESOIN
+    //@OneToOne(mappedBy = "adress")
+    //private Client client;
 
 }
